@@ -6,91 +6,109 @@ int main(){
 
 
 
-printf("                                                 DESAFIO CARTAS \n");
+printf("                                                 DESAFIO CARTAS (SUPER TRUNFO)\n");
 
-printf(" \n --------------------------------");
+printf("\n --------------------------------");
 
-printf(" \n(PRIMEIRA CARTA) \n");
+printf("\n(PRIMEIRA CARTA) \n");
 
-char estado[10] ="BAHIA";
-char carta[10] = "A01";
-char cidade[100] = "(SALVADOR)";
-int populacao = 2418;
-float pib = 62000;
-float area = 693000;
-int pontos = 78;
+char estado , carta1, carta2, carta3, carta4;
+char cidade1, cidade2, cidade3, cidade4; 
+int populacao1, populacao2, populacao3, populacao4;
+int ponto1, ponto2,ponto3,ponto4;
+float pib1, pib2, pib3, pib4;
+float area1, area2, area3, area4;
 
-printf("ESTADO: %s\n",estado);
-printf("CODIGO DA CARTA: %s \n", carta);
-printf("CIDADE: %s \n", cidade);    
-printf("POPULAÇÃO: %d \n" , populacao);
-printf("ÁREA EM Km²: %f \n", area);
-printf("PIB: %.2f \n", pib);
-printf("PONTOS TURISTICOS: %.d \n", pontos);
+printf("ESTADO: ");
+scanf("%s", &estado);
 
-printf(" \n --------------------------------");
+printf("CARTA: ");
+scanf("%s", &carta1);
 
-printf(" \n(SEGUNDA CARTA) \n");
+printf("CIDADE: ");
+scanf("%s", &cidade1);
 
-char estado2[20] = "BAHIA";
-char carta2[20] = "A02";
-char cidade2[200] ="(JUAZEIRO DA BAHIA)";
-int populacao2 =2378;
-float pib2 =26600;
-float area2 =721200;
-int pontos2 =28;
+printf("POPULAÇÃO: ");
+scanf("%d", &populacao1);
 
+printf("PIB: ");
+scanf("%d", &pib1);
 
-printf("ESTADO: %s\n",estado2);
-printf("CODIGO DA CARTA: %s \n", carta2);
-printf("CIDADE: %s \n", cidade2);    
-printf("POPULAÇÃO: %d \n" , populacao2);
-printf("ÁREA EM Km²: %f \n", area2);
-printf("PIB: %.2f \n", pib2);
-printf("PONTOS TURISTICOS: %.d \n", pontos2);
+printf("AREAM EM KM²: ");
+scanf("%d", &area1);
 
-printf(" \n --------------------------------");
+printf("PONTOS TURÍSTICOS: ");
+scanf("%d", &ponto1);
 
-printf(" \n(TERCEIRA CARTA) \n");
+printf("\n(SEGUNDA CARTA) \n");
 
-char estado3[20] = "BAHIA";
-char carta3[20] = "A03";
-char cidade3[200] ="(FEIRA DE SANTANA)";
-int populacao3 =616000;
-float pib3 =27691;
-float area3 =1304;
-int pontos3=30;
+printf("ESTADO: ");
+scanf("%s", &estado);
 
+printf("CARTA: ");
+scanf("%s", &carta2);
 
-printf("ESTADO: %s\n",estado3);
-printf("CODIGO DA CARTA: %s \n", carta3);
-printf("CIDADE: %s \n", cidade3);    
-printf("POPULAÇÃO: %d \n", populacao3);
-printf("ÁREA EM Km²: %f \n", area3);
-printf("PIB: %.2f \n", pib3);
-printf("PONTOS TURISTICOS: %.d \n", pontos3);
+printf("CIDADE: ");
+scanf("%s", &cidade2);
 
-printf(" \n --------------------------------");
+printf("POPULAÇÃO: ");
+scanf("%d", &populacao2);
 
-printf(" \n(QUARTA CARTA) \n");
+printf("PIB: ");
+scanf("%d", &pib2);
 
-char estado4[20] = "BAHIA";
-char carta4[20] = "A04";
-char cidade4[200] ="(ANTAS-BA)";
-int populacao4 =14206;
-float pib4=8179;
-float area4 =383900;
-int pontos4=10;
+printf("AREAM EM KM²: ");
+scanf("%d", &area2);
 
+printf("PONTOS TURÍSTICOS: ");
+scanf("%d", &ponto2);
 
-printf("ESTADO: %s\n",estado4);
-printf("CODIGO DA CARTA: %s \n", carta4);
-printf("CIDADE: %s \n", cidade4);    
-printf("POPULAÇÃO: %d \n", populacao4);
-printf("ÁREA EM Km²: %f \n", area4);
-printf("PIB: %.2f \n", pib4);
-printf("PONTOS TURISTICOS: %.d \n", pontos4);
+printf("\n(TERCEIRA CARTA) \n");
 
+printf("ESTADO: ");
+scanf("%s", &estado);
 
+printf("CARTA: ");
+scanf("%s", &carta3);
+
+printf("CIDADE: ");
+scanf("%s", &cidade3);
+
+printf("POPULAÇÃO: ");
+scanf("%d", &populacao3);
+
+printf("PIB: ");
+scanf("%d", &pib3);
+
+printf("AREAM EM KM²: ");
+scanf("%d", &area3);
+
+printf("PONTOS TURÍSTICOS: ");
+scanf("%d", &ponto3);
+
+printf("\n(QUARTA CARTA) \n");
+
+printf("ESTADO: ");
+scanf("%s", &estado);
+
+printf("CARTA: ");
+scanf("%s", &carta4);
+
+printf("CIDADE: ");
+scanf("%s", &cidade4);
+
+printf("POPULAÇÃO: ");
+scanf("%d", &populacao4);
+
+printf("PIB: ");
+scanf("%d", &pib4);
+
+printf("AREAM EM KM²: ");
+scanf("%d", &area4);
+
+printf("PONTOS TURÍSTICOS: ");
+scanf("%d", &ponto4);
+
+return 0;
 
 }
