@@ -2,7 +2,12 @@
 
 int main(){
 
-
+    char estado , carta1, carta2, carta3, carta4;
+    char cidade1, cidade2, cidade3, cidade4; 
+    int populacao1, populacao2, populacao3, populacao4;
+    int ponto1, ponto2,ponto3,ponto4;
+    float pib1, pib2, pib3, pib4;
+    float area1, area2, area3, area4;
 
 
 
@@ -12,12 +17,7 @@ printf("\n --------------------------------");
 
 printf("\n(PRIMEIRA CARTA) \n");
 
-char estado , carta1, carta2, carta3, carta4;
-char cidade1, cidade2, cidade3, cidade4; 
-int populacao1, populacao2, populacao3, populacao4;
-int ponto1, ponto2,ponto3,ponto4;
-float pib1, pib2, pib3, pib4;
-float area1, area2, area3, area4;
+
 
 printf("ESTADO: ");
 scanf("%s", &estado);
