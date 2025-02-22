@@ -2,67 +2,75 @@
 
 int main(){
 
-    char estado , carta1, carta2, carta3, carta4;
-    char cidade1, cidade2, cidade3, cidade4; 
-    int populacao1, populacao2, populacao3, populacao4;
-    int ponto1, ponto2,ponto3,ponto4;
-    float pib1, pib2, pib3, pib4;
-    float area1, area2, area3, area4;
+    char estado1, estado2;
+    char carta1, carta2;
+    char cidade, cidade2;
+    float populacao1, populacao2;
+    int ponto1, ponto2;
+    float pib1, pib2;
+    float area1, area2;
+    
+    printf("\n");
+    
+printf("                                                 DESAFIO CARTAS (SUPER TRUNFO)\n"); // EXIBIÇÃO DO DESAFIO
 
-
-
-printf("                                                 DESAFIO CARTAS (SUPER TRUNFO)\n");
-
-printf("\n --------------------------------");
+printf("\n ");
 
 printf("\n(PRIMEIRA CARTA) \n");
 
-printf("ESTADO: ");
-scanf("%s", &estado);
 
-printf("CARTA: ");
+// COLETA DE DADOS DA PRIMEIRA CARTA
+
+printf("DIGITE O ESTADO: ");
+scanf("%s", &estado1);
+
+printf("DIGITE A CARTA: ");
 scanf("%s", &carta1);
 
-printf("CIDADE: ");
-scanf("%s", &cidade1);
+printf("DIGITE O NOME DA CIDADE: ");
+scanf(" %20s", &cidade);
 
-printf("POPULAÇÃO: ");
-scanf("%d", &populacao1);
+printf("DIGITE A POPULAÇÃO: ");
+scanf("%20f",&populacao1);
 
-printf("PIB: ");
-scanf("%d", &pib1);
+printf("DIGITE O PIB: ");
+scanf("%20f",pib1);
 
-printf("AREA EM KM²: ");
-scanf("%d", &area1);
+printf("QUAL A AREA EM KM²: ");
+scanf("%20f",&area1);
 
-printf("PONTOS TURÍSTICOS: ");
+printf("QUANTOS PONTOS TURÍSTICOS: ");
 scanf("%d", &ponto1);
 
-printf("\n(SEGUNDA CARTA) \n");
+printf("\n ");
 
-printf("ESTADO: ");
-scanf("%s", &estado);
 
-printf("CARTA: ");
+printf("\n(SEGUNDA CARTA) \n"); // COLETA DE DADOS DA SEGUNDA CARTA 
+
+printf("DIGITE O ESTADO: ");
+scanf("%s", &estado2);
+
+printf("DIGITE A CARTA: ");
 scanf("%s", &carta2);
 
-printf("CIDADE: ");
-scanf("%s", &cidade2);
+printf("DIGITE O NOME DA CIDADE: ");
+scanf("%20s", &cidade2);
 
-printf("POPULAÇÃO: ");
-scanf("%d", &populacao2);
+printf("DIGITE A POPULAÇÃO: ");
+scanf("%20f", &populacao2);
 
-printf("PIB: ");
-scanf("%d", &pib2);
+printf("DIGITE O PIB: ");
+scanf("%20f", &pib2);
 
-printf("AREA EM KM²: ");
-scanf("%d", &area2);
+printf("QUAL A AREA EM KM²: ");
+scanf("%20f", &area2);
 
-printf("PONTOS TURÍSTICOS: ");
+printf("QUANTOS PONTOS TURÍSTICOS: ");
 scanf("%d", &ponto2);
 
 
 return 0;
+
 
 
 }
