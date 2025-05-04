@@ -1,83 +1,301 @@
-Que legal que você gostou da ideia! Para desenvolver um Desafio de Lógica Super Trunfo, podemos pensar em algumas abordagens interessantes que vão além da simples comparação de valores diretos. A lógica pode entrar em jogo de diversas maneiras, tornando o jogo mais estratégico e divertido.
+int main(){
 
-Aqui estão algumas ideias e como podemos começar a estruturar esse desafio:
 
-1. Introdução de "Poderes Especiais" Lógicos:
 
-Em vez de apenas atributos numéricos, cada carta poderia ter um poder especial que influencia a rodada de acordo com uma regra lógica. Por exemplo:
-
-"Especialista em Área": Se a diferença de área entre as duas cartas for maior que X%, a carta com maior área vence, ignorando outros atributos.
-"Foco em População": Se a população de uma carta for o dobro da outra, essa carta vence, independentemente dos outros valores.
-"Impulso Econômico": Se o PIB per capita de uma carta for maior que Y e a população for menor que Z, adiciona-se um bônus de pontos a um atributo escolhido.
-"Conexão Turística": Se ambas as cartas tiverem mais de N pontos turísticos, a carta com a menor densidade populacional vence.
-2. Atributos Relacionais:
-
-Em vez de valores absolutos, alguns atributos poderiam ser relacionais entre as cartas:
-
-"Crescimento Populacional Relativo": Em vez da população atual, a carta poderia ter uma taxa de crescimento populacional. A lógica seria comparar essas taxas.
-"Índice de Desenvolvimento Humano (IDH) Relativo": Comparar a diferença no IDH entre as "cidades".
-3. "Desafios" Lógicos nas Rodadas:
-
-A cada rodada, além de escolher um atributo para comparar, poderia haver um "desafio" lógico adicional:
-
-"Desafio da Sustentabilidade": Se a soma da área e da população de uma cidade for menor que um determinado valor, ela ganha um ponto extra nesta rodada.
-"Desafio da Eficiência Econômica": A carta com o maior PIB per capita em relação à sua densidade populacional ganha a rodada. (
-fracPIB per capitaDensidade)
-4. Implementação no Código:
-
-Para implementar essas ideias no seu código em C, precisaríamos fazer algumas modificações significativas:
-
-Estrutura das Cartas: Criar uma estrutura (usando struct) para agrupar os diferentes atributos de cada carta, incluindo os novos "poderes especiais" ou atributos relacionais.
-Funções para os Poderes Especiais: Implementar funções que avaliem as condições lógicas dos poderes especiais e determinem o vencedor da rodada com base nessas regras.
-Lógica do Jogo: Desenvolver a lógica principal do jogo, que incluiria:
-Apresentar as cartas aos jogadores (ou ao computador, se for um jogo single-player).
-Permitir que o jogador escolha um atributo ou use um poder especial.
-Aplicar as regras lógicas para determinar o vencedor da rodada.
-Manter o controle das cartas de cada jogador.
-Declarar um vencedor final.
-Exemplo de Estrutura (Simplificada):
-
-C
-
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h> // Para usar rand() e srand()
-
-// Estrutura para representar uma carta (cidade)
-typedef struct {
-    char estado[10];
-    char nome[20];
-    int populacao;
-    float pib;
-    float area;
-    int pontos_turisticos;
-    char poder_especial[50]; // Descrição do poder especial
-} Carta;
-
-// Função para exibir os dados de uma carta
-void exibir_carta(Carta carta) {
-    printf("Estado: %s\n", carta.estado);
-    printf("Cidade: %s\n", carta.nome);
-    printf("População: %d\n", carta.populacao);
-    printf("PIB: %.2f\n", carta.pib);
-    printf("Área: %.2f\n", carta.area);
-    printf("Pontos Turísticos: %d\n", carta.pontos_turisticos);
-    printf("Poder Especial: %s\n", carta.poder_especial);
-}
-
-int main() {
-    // Exemplo de criação de duas cartas
-    Carta carta1 = {"SP", "São Paulo", 12000000, 700.5, 1500.0, 10, "Especialista em Área"};
-    Carta carta2 = {"RJ", "Rio de Janeiro", 7000000, 350.2, 1200.5, 15, "Foco em População"};
-
-    printf("Carta 1:\n");
-    exibir_carta(carta1);
-    printf("\nCarta 2:\n");
-    exibir_carta(carta2);
-
-    // Aqui você implementaria a lógica do jogo,
-    // permitindo que os jogadores escolham atributos
-    // ou usem os poderes especiais para comparar as cartas.
-
+        // variaveis
+    
+    
+    
+        char estado1[10], estado2[10];
+    
+        char carta1[10], carta2[10];
+    
+        char cidade1[20];
+    
+        char cidade2[20];
+    
+        int populacao1, populacao2;
+    
+        int ponto1, ponto2;
+    
+        float pib1, pib2;
+    
+        float area1, area2;
+    
+        float densidade1, densidade2, percapita1, percapita2;
+    
+        float poder;
+    
+    
+    
+        printf("\n");
+    
+       
+    
+    printf("                                                 DESAFIO CARTAS (SUPER TRUNFO)\n"); // EXIBIÇÃO DO DESAFIO
+    
+    
+    
+    printf("\n ");
+    
+    
+    
+    printf("\n(PRIMEIRA CARTA) \n");
+    
+    
+    
+    // COLETA DE DADOS DA PRIMEIRA CARTA
+    
+    
+    
+    printf("DIGITE O ESTADO: ");
+    
+    scanf("%s", &estado1);
+    
+    
+    
+    
+    
+    printf("DIGITE A CARTA: ");
+    
+    scanf("%s", &carta1);
+    
+    
+    
+    printf("DIGITE O NOME DA CIDADE: ");
+    
+    scanf("%s", &cidade1);
+    
+    
+    
+    printf("DIGITE A POPULAÇÃO: ");
+    
+    scanf("%d", &populacao1);
+    
+    
+    
+    printf("DIGITE O PIB: ");
+    
+    scanf("%f",&pib1);
+    
+    
+    
+    printf("QUAL A AREA EM KM²: ");
+    
+    scanf("%f",&area1);
+    
+    
+    
+    printf("QUANTOS PONTOS TURÍSTICOS: ");
+    
+    scanf("%d", &ponto1);
+    
+    
+    
+     
+    
+    // area de cálculos
+    
+    
+    
+    float Densidade1= populacao1 / area1;
+    
+    printf("DENSIDADE POPULACIONAL: %1.2f\n", Densidade1);
+    
+    
+    
+    float pibPercapta1= pib1 / populacao1;
+    
+    printf("PIB PER CAPITA: %2f\n", pibPercapta1);
+    
+    
+    
+    
+    
+    printf("\n ");
+    
+    
+    
+    printf("\n(SEGUNDA CARTA) \n"); // COLETA DE DADOS DA SEGUNDA CARTA
+    
+    
+    
+    printf("DIGITE O ESTADO: ");
+    
+    scanf("%s", &estado2);
+    
+    
+    
+    printf("DIGITE A CARTA: ");
+    
+    scanf("%s", &carta2);
+    
+    
+    
+    printf("DIGITE O NOME DA CIDADE: ");
+    
+    scanf("%s", cidade2);
+    
+    
+    
+    printf("DIGITE A POPULAÇÃO: ");
+    
+    scanf("%d", &populacao2);
+    
+    
+    
+    printf("DIGITE O PIB: ");
+    
+    scanf("%20f", &pib2);
+    
+    
+    
+    printf("QUAL A AREA EM KM²: ");
+    
+    scanf("%20f", &area2);
+    
+    
+    
+    printf("QUANTOS PONTOS TURÍSTICOS: ");
+    
+    scanf("%d", &ponto2);
+    
+    
+    
+    // coleta de reultado das cartas
+    
+    printf("_________________________________________________________________________________\n");
+    
+    printf("( RESULTADO DA PRIMEIRA CARTA)\n");
+    
+    printf("_________________________________________________________________________________\n");
+    
+    
+    
+    printf("\n");
+    
+    
+    
+    printf("Estado: %s\n",estado1);
+    
+    
+    
+    printf("Código da carta: %s\n", carta1);
+    
+    
+    
+    printf("Nome da cidade: %s\n", cidade1);
+    
+    
+    
+    printf("A população da cidadade é: %d Mihões\n", populacao1);
+    
+    
+    
+    printf("A área da cidade é de: %.2f Km2\n", area1);
+    
+    
+    
+    printf("O PIB da cidade é de:  %.2f bilhões\n", pib1);
+    
+    
+    
+    printf("Número de pontos turísticos: %d\n", ponto1);
+    
+    
+    
+    densidade1 = populacao1 / area1;
+    
+    
+    
+    printf("A densidade popupalional é: %.2f\n", Densidade1);
+    
+    
+    
+    percapita1 = pib1 / populacao1;
+    
+    
+    
+    printf("A renda percapita é: %f\n", percapita1);
+    
+    
+    
+    
+    
+    printf("_________________________________________________________________________________\n");
+    
+    printf("( RESULTADO DA SEGUNDA CARTA)\n");
+    
+    printf("_________________________________________________________________________________\n");
+    
+    
+    
+    printf("\n");
+    
+    
+    
+    printf("Estado: %s\n",estado2);
+    
+    
+    
+    printf("Código da carta: %s\n", carta2);
+    
+    
+    
+    printf("Nome da cidade: %s\n", cidade2);
+    
+    
+    
+    printf("A população da cidadade é: %d Milhões\n", populacao2);
+    
+    
+    
+    printf("A área da cidade é de: %.2f Km2\n", area2);
+    
+    
+    
+    printf("O PIB da cidade é de:  %.2f bilhões\n", pib2);
+    
+    
+    
+    printf("Total de pontos turísticos: %d\n", ponto2);
+    
+    
+    
+    densidade2 = populacao2 / area2;
+    
+    
+    
+    printf("A densidade popupalional é: %.2f\n", densidade2);
+    
+    
+    
+    percapita2 = pib2 / populacao2;
+    
+    
+    
+    printf("A renda percapita é: %f\n", percapita2);
+    
+    
+    
+    poder = populacao2 + area2 + densidade2 + percapita2 + pib1;
+    
+    
+    
+    printf("Super Poder: %.2f\n", poder);
+    
+    
+    
+    
+    
+    
+    
     return 0;
-}
+    
+    
+    
+    
+    
+    
+    
+    }
